@@ -1,5 +1,5 @@
 class Pessoa:
-    def __init__(self, *filhos, nome = None, idade =35):
+    def __init__(self, *filhos, nome=None, idade=35):
         self.idade = idade
         self.nome = nome
         self.filhos = list(filhos)
@@ -10,7 +10,7 @@ class Pessoa:
 
 
 if __name__ == '__main__':
-    daniel = Pessoa('Daniel')
+    daniel = Pessoa(nome='Daniel')
     luciano = Pessoa(daniel, nome ='Luciano')
     print(Pessoa.cumprimentar(luciano))
     print(id(luciano))
@@ -19,3 +19,7 @@ if __name__ == '__main__':
     print(luciano.idade)
     for filho in luciano.filhos:
         print(filho.nome)
+    luciano.sobrenome = 'Ramalho'
+    del luciano.filhos
+    print(luciano.__dict__)
+    print(daniel.__dict__)
