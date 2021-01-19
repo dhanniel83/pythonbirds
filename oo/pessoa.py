@@ -18,3 +18,7 @@ if __name__ == '__main__':
     for filho in luana.filhos:
         print(filho.nome)
     print(luana.filhos)
+    luana.sobrenome = 'maria'
+    del luana.filhos
+    print(luana.__dict__)
+    print(daniel.__dict__)
